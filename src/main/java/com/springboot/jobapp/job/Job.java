@@ -1,10 +1,13 @@
 package com.springboot.jobapp.job;
 
+import com.springboot.jobapp.company.Company;
 import jakarta.persistence.*;
 
 //@Table(name="job_table")
 @Entity    //class supposed to be mapped to a table
 public class Job {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,8 +18,12 @@ public class Job {
     private String maxSalary;
     private String location;
 
+    @ManyToOne
+    private Company company;
+
     public Job() {
     }
+
 
     public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
         this.id = id;
@@ -25,6 +32,15 @@ public class Job {
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
         this.location = location;
+    }
+
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     public Long getId() {

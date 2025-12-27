@@ -1,5 +1,6 @@
 package com.springboot.jobapp.company;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.springboot.jobapp.job.Job;
 import jakarta.persistence.*;
 
@@ -16,7 +17,8 @@ public class Company {
     private String description;
 
     //one company has many jobs
-    @OneToMany
+    @JsonIgnore
+    @OneToMany(mappedBy = "company")
     private List<Job> jobs;
 
     //one company has (many)list of reviews
