@@ -1,4 +1,4 @@
-package com.springboot.jobapp.job.impl;
+package com.springboot.jobapp.company.impl;
 
 import com.springboot.jobapp.company.Company;
 import com.springboot.jobapp.company.CompanyRepository;
