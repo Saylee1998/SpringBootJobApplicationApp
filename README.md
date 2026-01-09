@@ -64,7 +64,7 @@ Entity relationships are managed using JPA annotations.
 
 ### ⚙️ Technologies Used
 
-- Java 17+
+- Java 21
 - Spring Boot
 - Spring Web
 - Spring Data JPA
@@ -175,6 +175,28 @@ POST /companies/1/reviews
 }
 ```
 
+### 📘 API Documentation (Swagger / OpenAPI)
+
+This project uses **Springdoc OpenAPI** to provide interactive API documentation via **Swagger UI**.
+
+Swagger automatically generates API documentation from the Spring Boot controllers and allows testing endpoints directly from the browser.
+
+#### 🔗 Swagger UI
+Once the application is running, access Swagger UI at:
+
+http://localhost:8080/swagger-ui/index.html
+
+#### ✨ Features
+- View all available REST endpoints
+- Test API requests (GET, POST, PUT, DELETE) directly from the UI
+- Inspect request/response schemas and HTTP status codes
+- OpenAPI 3.0 compliant documentation
+
+#### 🛠 Implementation Details
+- Spring Boot 3.x
+- `springdoc-openapi-starter-webmvc-ui`
+- Custom OpenAPI configuration for project metadata (title, description, version)
+
 ### 🧩 Architecture
 ```
 Controller
@@ -202,7 +224,7 @@ Database (PostgreSQL)
 - Port: `5050`
 
 #### Spring Boot App
-- Image: `saylee06/jobappimage:latest`
+- Built locally using Dockerfile
 - Port: `8080`
 
 ### 📌 Notes
