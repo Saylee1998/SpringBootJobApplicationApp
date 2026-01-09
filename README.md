@@ -1,4 +1,4 @@
-## Spring Boot Job Application API
+## Spring Boot Job Application
 
 A Spring Boot REST API for managing Companies, Jobs, and Reviews, backed by PostgreSQL and fully Dockerized using docker-compose.
 
@@ -83,10 +83,9 @@ Make sure you have:
 #### 2️⃣ Environment Variables
 Create a `.env` file in the project root:
 ```env
-POSTGRES_USER=Your Username
-POSTGRES_PASSWORD=Your password
-POSTGRES_DB=your db name
-
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=jobappdb
 ```
 
 #### 3️⃣ Start Containers
